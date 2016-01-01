@@ -1,0 +1,18 @@
+<div class="col-sm-6 col-sm-offset-3">
+    <div ng-if="currentUser.id == userProfile.userId" class="well">
+        <h5>Welcome, {{currentUser.name}}</h5>
+        <h1 class="page-header">{{page.title}}</h1>
+        <ul class="list-group" ng-show="profile">
+            <li class="list-group-item">
+                <h4>{{currentUser.name}}</h4>
+                <h4>{{currentUser.email}}</h4>
+                <h4>{{userProfile.phone}}</h4>
+                <h5>{{userProfile.congregation}}</h5>
+            </li>
+        </ul>
+        <div class="alert alert-danger" ng-if="user.error">
+            <strong>There was an error: </strong> {{user.error.error}}
+            <br>Please go back and login again
+        </div>
+    </div>
+</div>

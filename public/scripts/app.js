@@ -1,16 +1,21 @@
+var controllers = angular.module('app.controllers', []);
 (function () {
 
     'use strict';
+    
 
     angular
-            .module('authApp', [
-                'app.services',
+            .module('app', [
                 'app.controllers',
+                'app.services',
+//                'app.controllers',
                 'ngResource',
                 'ui.router',
                 'satellizer',
                 'angularUtils.directives.dirPagination',
-                'isteven-multi-select'])
+                'isteven-multi-select',
+//                'angularSoap'
+            ])
             .config(function ($stateProvider, $urlRouterProvider, $authProvider, $httpProvider, $provide) {
 
                 function redirectWhenLoggedOut($q, $injector) {
@@ -66,12 +71,27 @@
                         .state('auth', {
                             url: '/auth',
                             templateUrl: '../public/views/authView.html',
-                            controller: 'AuthController as auth'
+                            controller: 'authController as auth'
                         })
                         .state('users', {
                             url: '/users',
                             templateUrl: '../public/views/userView.html',
-                            controller: 'UserController as user'
+                            controller: 'userController as user'
+                        })
+                        .state('dashboard', {
+                            url: '/dashboard',
+                            templateUrl: '../public/views/dashboard/dashboard.html',
+                            controller: 'userController as user'
+                        })
+                        .state('profile/:userId', {
+                            url: '/profile/:userId',
+                            templateUrl: '../public/views/profile/profile.html',
+                            controller: 'profileController as profile'
+                        })
+                        .state('createUser', {
+                            url: '/createUser',
+                            templateUrl: '../public/views/profile/createUser.html',
+                            controller: 'createUserController as createUser'
                         })
                         .state('speakers', {
                             url: '/speakers',

@@ -5,7 +5,7 @@
         <title>Angular-Laravel Authentication</title>
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     </head>
-    <body ng-app="authApp">
+    <body ng-app="app">
 
         <div class="container">
             <div ui-view></div>
@@ -23,11 +23,17 @@
     <script src="http://52.70.71.125/ci_angular/bower_components/angular-filter/dist/angular-filter.js"></script>
     <script src="http://52.70.71.125/ci_angular/bower_components/angularUtils-pagination/dirPagination.js"></script>
     <script src="scripts/multi-select.js"></script>
+<!--    <script src="scripts/soapclient.js"></script>
+    <script src="scripts/angular.soap.js"></script>-->
 
     <!-- Application Scripts -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/authController.js"></script>
-    <script src="scripts/userController.js"></script>
+    <script src="scripts/controllers/authController.js"></script>
+    <script src="scripts/controllers/userController.js"></script>
+    <script src="scripts/controllers/speakerController.js"></script>
+    <script src="scripts/controllers/profileController.js"></script>
+    
+    
     <script src="scripts/services.js"></script>
-    <script src="scripts/controllers.js"></script>
+    
 </html>
